@@ -1,1 +1,2 @@
-var Socket = io.connect('https://localhost:600');
+
+var clientSocket = io.connect('http://localhost:8000');

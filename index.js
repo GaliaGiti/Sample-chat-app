@@ -1,15 +1,28 @@
 var express = require('express');
 var app = express();
-var socket = require('socket.io');
-var server = app.listen(600, function(){
 
-    console.log("Listening to port number 600");
+var serverSidesocketIO = require('socket.io')
+
+var portNumber = 8000;
+var server = app.listen(portNumber, function(){
+    console.log(`Listening to port number ${portNumber}`);
 });
 
 app.use(express.static('public'));
 
-var io = socket(server);
+var serverSideIO = serverSidesocketIO(server);
 
-io.on('connection', function(socket){
+serverSideIO.on('connection', function(clientSocket){
+    console.log('made socket connection', clientSocket.id);
+})
+
+
+
+
+// var socket = require('socket.io');
+
+// var io = socket(server);
+
+/* io.on('connection', function(socket){
     console.log("made socket connection", socket.id);
-});
+}); */
