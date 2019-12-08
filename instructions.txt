@@ -5,3 +5,8 @@
 
 - ক্লায়েন্ট সাইডে (ব্রাউজারে, অর্থাত ইন্ডেক্সএইচটিএমএল )
     - io (এই নামটা ওরা দিয়ে দিসে)
+
+commit message is the answer of the question:
+"what are these file-changes do?"
+
+These changes make the server connect to the client properly

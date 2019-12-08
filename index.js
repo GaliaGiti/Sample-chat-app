@@ -14,8 +14,12 @@ var serverSideIO = serverSidesocketIO(server);
 
 serverSideIO.on('connection', function(clientSocket){
     console.log('made socket connection', clientSocket.id);
-})
 
+    clientSocket.on('disconnect', function(){
+        console.log('somebody disconnected' + clientSocket.id)
+    })
+
+})
 
 
 
